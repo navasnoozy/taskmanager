@@ -1,8 +1,8 @@
 //app.tsx
-import {  Container, Stack, VStack } from "@chakra-ui/react"
-import TaskManager from "./components/taskManager/taskList"
-import AddTask from "./components/taskManager/AddTask"
+import { VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import AddTask from "./components/taskManager/AddTask";
+import TaskManager from "./components/taskManager/taskList";
 
 export interface Task {
   id: number;
