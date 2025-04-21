@@ -1,3 +1,4 @@
+//src/components/taskManager/taskList.tsx
 import {
   Stack,
   Card,
@@ -15,30 +16,13 @@ interface Task {
   status: "To Do" | "In Progress" | "Done";
 }
 
-const TaskManager = () => {
-  const tasks: Task[] = [
-    {
-      id: 1,
-      title: "Task One",
-      description: "Description for task one",
-      status: "To Do",
-    },
-    {
-      id: 2,
-      title: "Task Two",
-      description: "Description for task two",
-      status: "In Progress",
-    },
-    {
-      id: 3,
-      title: "Task Three",
-      description: "Description for task three",
-      status: "Done",
-    },
-  ];
+interface TaskManagerProps {
+  tasks: Task[];
+}
 
+const TaskManager = ({ tasks }: TaskManagerProps) => {
   return (
-    <Stack>
+    <Stack width="full">
       <Card.Root size="sm" borderRadius="2xl">
         <Card.Header>
           <Heading size="3xl"> Task Manager</Heading>
@@ -56,14 +40,14 @@ const TaskManager = () => {
               </Box>
 
               <Badge
-                variant="solid"
+                variant={task.status === 'To Do' ? 'subtle': 'solid'}
                 padding="2"
                 colorPalette={
                   task.status === "Done"
                     ? "green"
                     : task.status === "In Progress"
                     ? "blue"
-                    : task.status === 'To Do' ? 'gray': ''
+                    : 'gray'
                 }
               >
                 {task.status}
