@@ -25,14 +25,14 @@ const TaskManager = ({ tasks }: TaskManagerProps) => {
     <Stack width="full">
       <Card.Root size="sm" borderRadius="2xl">
         <Card.Header>
-          <Heading size="3xl"> Task Manager</Heading>
+          <Heading size="4xl"> Task Manager</Heading>
         </Card.Header>
         <Card.Body color="fg.muted">
           <Heading size="2xl"> Tasks</Heading>
           {tasks.map((task) => (
             <HStack key={task.id} p={4} justify="space-between" align="center">
               <Box minWidth="100px">
-                <Heading size="md">{task.title}</Heading>
+                <Heading size="lg">{task.title}</Heading>
               </Box>
 
               <Box flex="1">

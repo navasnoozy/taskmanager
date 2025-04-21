@@ -90,7 +90,7 @@ const AddTask = ({ setTasks }: AddTaskProps) => {
                 </Select.Content>
               </Select.Root>
             </Stack>
-            <Button type="submit" mt="5" colorPalette="blue">
+            <Button type="submit" mt="5" colorPalette="blue" borderRadius="lg">
               Add Task
             </Button>
           </Card.Body>
